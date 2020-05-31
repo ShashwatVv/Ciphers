@@ -3,6 +3,8 @@
 #message,mode and key
 #mode: can be either 1(Encryption) or 2(Decryption)
 #key: any non-negative integer smaller than 26
+
+import pandas as pd
 Letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 def CaeserCipher(message, mode, key ):
@@ -27,5 +29,12 @@ def CaeserCipher(message, mode, key ):
             else:
                 x = x
             result = result + x
-
+    #copying the result to clipboard        
+    df = pd.DataFrame(list(result))
+    df.to_clipboard(index=False,header=False)
+    print("Result has been copied to clipboard!!!")
     return result
+print(CaeserCipher("What is GitHub",1,3))
+
+
+
