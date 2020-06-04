@@ -9,7 +9,7 @@
 import pandas as pd
 Letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-def CaeserCipher(message, mode, key, Letters = Letters ):
+def caeserCipher(message, mode, key, Letters = Letters ):
     message = message.upper()
     result = ''
     n = len(Letters)
